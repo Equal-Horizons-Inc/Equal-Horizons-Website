@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+html,
+body {
+  background-color: #fbfcfc;
+  color: #1c2340;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-sora);
+}
+
+/* Visible, high-contrast focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid #4274d9;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background-color: #95ccdd;
+  color: #293681;
+}
+
+.container-ph {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-horizon;
+}
+
+.section-heading {
+  @apply font-sora text-3xl font-semibold text-ink sm:text-4xl;
+}
+
+.body-copy {
+  @apply font-inter text-base leading-relaxed text-graphite/80 sm:text-lg;
+}
+
+/* subtle grain texture used behind hero + CTA panels */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.status-pill {
+  @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wide;
+}
