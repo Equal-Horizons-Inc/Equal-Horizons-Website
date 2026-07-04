@@ -8,12 +8,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#293681", // deep indigo — headings, dark surfaces
-        horizon: "#4274D9", // primary blue — actions, links
-        sky: "#95CCDD", // light accent — highlights, secondary
-        mist: "#D0E7E6", // pale wash — backgrounds, dividers
-        paper: "#FBFCFC", // near-white page background
-        graphite: "#1C2340", // body text on light backgrounds
+        // muted, handcrafted palette
+        ink: "#24323a", // deep slate — headings, dark surfaces
+        horizon: "#7C5A3E", // muted warm accent — actions, links
+        sky: "#C8DDCC", // soft sage — highlights
+        mist: "#E9F0EE", // pale wash — backgrounds, dividers
+        paper: "#FCFBF9", // near-white page background
+        graphite: "#33414A", // body text on light backgrounds
       },
       fontFamily: {
         sora: ["var(--font-sora)", "sans-serif"],
@@ -35,11 +36,11 @@ const config: Config = {
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-14px)" },
+          "50%": { transform: "translateY(-8px)" },
         },
         floatSlow: {
           "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
-          "50%": { transform: "translateY(-10px) translateX(6px)" },
+          "50%": { transform: "translateY(-6px) translateX(4px)" },
         },
         drift: {
           "0%": { transform: "translateX(0)" },
@@ -47,9 +48,9 @@ const config: Config = {
         },
       },
       animation: {
-        float: "float 7s ease-in-out infinite",
-        floatSlow: "floatSlow 10s ease-in-out infinite",
-        drift: "drift 40s linear infinite",
+        float: "float 10s ease-in-out infinite",
+        floatSlow: "floatSlow 14s ease-in-out infinite",
+        drift: "drift 60s linear infinite",
       },
     },
   },

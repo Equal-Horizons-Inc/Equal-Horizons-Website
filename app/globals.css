@@ -22,12 +22,14 @@
 
 html,
 body {
-  background-color: #fbfcfc;
-  color: #1c2340;
+  background-color: #FCFBF9;
+  color: #33414A;
 }
 
 body {
   font-family: var(--font-inter);
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 h1,
@@ -39,14 +41,14 @@ h4 {
 
 /* Visible, high-contrast focus ring for keyboard users */
 :focus-visible {
-  outline: 3px solid #4274d9;
+  outline: 3px solid #7C5A3E;
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 ::selection {
-  background-color: #95ccdd;
-  color: #293681;
+  background-color: #C8DDCC;
+  color: #24323a;
 }
 
 .container-ph {
@@ -62,7 +64,7 @@ h4 {
 }
 
 .body-copy {
-  @apply font-inter text-base leading-relaxed text-graphite/80 sm:text-lg;
+  @apply font-inter text-base leading-7 text-graphite/85 sm:text-lg;
 }
 
 /* subtle grain texture used behind hero + CTA panels */
@@ -71,7 +73,7 @@ h4 {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.03;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

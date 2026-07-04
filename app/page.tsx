@@ -58,7 +58,7 @@ export default function HomePage() {
             variants={staggerContainer}
           >
             <motion.span variants={staggerItem} className="eyebrow">
-              <span className="h-1.5 w-1.5 rounded-full bg-horizon" />
+              {/* <span className="h-1.5 w-1.5 rounded-full bg-horizon" /> */}
               Early-stage nonprofit initiative
             </motion.span>
 
