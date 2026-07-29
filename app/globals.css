@@ -1110,7 +1110,7 @@ a {
 
 .sunrise-cta-inner {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   display: grid;
   min-height: 690px;
   place-items: center;
@@ -1119,7 +1119,7 @@ a {
 
 .sunrise-cta-copy {
   max-width: 790px;
-  padding-bottom: 5rem;
+  padding-bottom: 12rem;
 }
 
 .sunrise-cta-copy h2 {
@@ -1166,8 +1166,9 @@ a {
 .cta-hills {
   position: absolute;
   inset: auto 0 0;
-  z-index: -1;
+  z-index: 1;
   height: 230px;
+  pointer-events: none;
 }
 
 .cta-hill {
@@ -1712,14 +1713,16 @@ a {
 
 .journey-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: clamp(3rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.72fr);
+  gap: clamp(4rem, 8vw, 8rem);
   align-items: start;
 }
 
 .journey-sticky {
-  position: relative;
+  position: sticky;
+  top: 116px;
   min-width: 0;
+  padding-bottom: 2rem;
 }
 
 .journey-heading {
@@ -1817,10 +1820,11 @@ a {
   left: 54%;
   width: 238px;
   height: 128px;
+  overflow: visible;
   border: 3px solid var(--outline);
   border-radius: 52% 48% 49% 51% / 58% 58% 42% 42%;
   background: linear-gradient(160deg, #dff49c, #7bd282 62%, #50aa79);
-  box-shadow: inset 0 -18px 0 rgba(62, 116, 143, 0.2), 0 26px 0 -12px #7563c4;
+  box-shadow: inset 0 -18px 0 rgba(62, 116, 143, 0.2), 0 16px 22px rgba(40, 72, 92, 0.18);
   transform-origin: center;
 }
 
@@ -1831,6 +1835,7 @@ a {
   right: 26px;
   bottom: -58px;
   height: 82px;
+  z-index: -1;
   border: 3px solid var(--outline);
   border-top: 0;
   clip-path: polygon(0 0, 100% 0, 68% 100%, 35% 82%);
@@ -1950,16 +1955,12 @@ a {
 }
 
 .journey-steps {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 3rem;
-  padding-top: 0;
-  border-top: 1.5px solid rgba(41, 76, 98, 0.3);
+  padding-top: 12rem;
 }
 
 .journey-step {
   display: flex;
-  min-height: 390px;
+  min-height: 72vh;
   flex-direction: column;
   justify-content: center;
   padding: 4rem 0;
@@ -1968,7 +1969,7 @@ a {
 }
 
 .journey-step:first-child {
-  border-top: 0;
+  border-top: 1.5px solid rgba(41, 76, 98, 0.3);
 }
 
 .journey-step-number {
@@ -2021,8 +2022,17 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .journey-sticky {
+    position: relative;
+    top: auto;
+  }
+
   .journey-art {
     min-height: 400px;
+  }
+
+  .journey-steps {
+    padding-top: 1.5rem;
   }
 
   .journey-step {
@@ -2055,10 +2065,6 @@ a {
     top: 90px;
     left: 46%;
     scale: 0.68;
-  }
-
-  .journey-steps {
-    grid-template-columns: 1fr;
   }
 
   .journey-step-number {
