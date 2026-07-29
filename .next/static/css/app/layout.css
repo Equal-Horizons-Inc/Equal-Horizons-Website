@@ -2688,6 +2688,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: env(safe-area-inset-top);
   transition: background 220ms ease, border-color 220ms ease, backdrop-filter 220ms ease;
 }
 
@@ -2703,6 +2704,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  padding-top: env(safe-area-inset-top);
 }
 
 .brand-lockup,
@@ -3010,7 +3012,13 @@ a {
 @media (max-width: 820px) {
   .desktop-nav-links,
   .nav-contact { display: none; }
-  .menu-toggle { display: block; }
+  .menu-toggle {
+    position: fixed;
+    top: calc(14px + env(safe-area-inset-top));
+    right: 16px;
+    z-index: 240;
+    display: block;
+  }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .footer-statement { grid-column: 1 / -1; }
 }
@@ -3019,8 +3027,9 @@ a {
   .site-nav { height: 72px; }
   .brand-wordmark { font-size: 0.92rem; }
   .brand-mark { width: 39px; height: 31px; }
-  .mobile-navigation { padding-top: 72px; }
-  .mobile-navigation-inner { min-height: calc(100vh - 72px); }
+  .menu-toggle { top: calc(12px + env(safe-area-inset-top)); right: 14px; }
+  .mobile-navigation { padding-top: calc(72px + env(safe-area-inset-top)); }
+  .mobile-navigation-inner { min-height: calc(100vh - 72px - env(safe-area-inset-top)); }
   .footer-main { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-statement { grid-column: auto; }
   .footer-bottom { flex-direction: column; }
