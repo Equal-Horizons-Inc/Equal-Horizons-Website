@@ -64,7 +64,6 @@ export default function ScrollJourney() {
   const routeScale = useTransform(smoothProgress, [0, 1], [0.04, 1]);
   const bloomScale = useTransform(smoothProgress, [0.56, 0.82], [0.35, 1]);
   const bloomOpacity = useTransform(smoothProgress, [0.48, 0.66], [0, 1]);
-  const seedRotate = useTransform(smoothProgress, [0, 1], [0, 260]);
   const artBackground = useTransform(
     smoothProgress,
     [0, 0.5, 1],
@@ -113,12 +112,6 @@ export default function ScrollJourney() {
             >
               <span className="journey-tree-trunk" />
               <span className="journey-tree-crown" />
-              <motion.span
-                className="journey-seed-orbit"
-                style={reduceMotion ? undefined : { rotate: seedRotate }}
-              >
-                <i />
-              </motion.span>
               <motion.span
                 className="journey-bloom"
                 style={

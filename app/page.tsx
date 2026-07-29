@@ -204,11 +204,6 @@ export default function HomePage() {
       <section className="sunrise-cta">
         <div className="cta-cloud cta-cloud--one" aria-hidden="true" />
         <div className="cta-cloud cta-cloud--two" aria-hidden="true" />
-        <div className="cta-orbit" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-        </div>
         <div className="container-ph sunrise-cta-inner">
           <Reveal className="sunrise-cta-copy">
             <p className="editorial-index">THE NEXT HORIZON</p>

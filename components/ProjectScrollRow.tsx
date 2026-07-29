@@ -67,8 +67,6 @@ export default function ProjectScrollRow(project: ProjectScrollRowProps) {
         aria-hidden="true"
       >
         <div className="project-art-sun" />
-        <div className="project-art-orbit project-art-orbit--one" />
-        <div className="project-art-orbit project-art-orbit--two" />
         {project.art === "glasses" && (
           <div className="glasses-object">
             <span className="lens lens--left" />

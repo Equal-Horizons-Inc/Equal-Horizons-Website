@@ -87,13 +87,7 @@
   <path d="M0 558c123-76 225-41 333-74 105-33 172-17 274 38 119 64 221 17 313-44v282H0Z" fill="url(#hillNear)" stroke="#274e59" stroke-width="4"/>
   <path d="M0 647c161-57 264-22 383-49 138-31 245 3 334 53 73 40 134 31 203 2v107H0Z" fill="#2f8e72" stroke="#274e59" stroke-width="4"/>
 
-  <g transform="translate(604 367)"><g id="orbit">
-    <ellipse rx="196" ry="88" fill="none" stroke="#2f5270" stroke-width="3" opacity=".5"/>
-    <ellipse rx="160" ry="68" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 15" opacity=".9"/>
-    <g transform="translate(196 0)"><circle r="17" fill="#ffcc68" stroke="#2f5270" stroke-width="4"/><path d="M-5 2c6-11 15-11 20-1-8 7-14 8-20 1Z" fill="#fff4bc"/></g>
-    <g transform="translate(-132 -55)"><circle r="14" fill="#8771df" stroke="#2f5270" stroke-width="4"/><circle r="5" fill="#efeaff"/></g>
-    <g transform="translate(70 76)"><circle r="13" fill="#62cba0" stroke="#2f5270" stroke-width="4"/><path d="M0-8v16M-8 0H8" stroke="#ecfff7" stroke-width="3" stroke-linecap="round"/></g>
-  </g></g>
+  
 
   <g filter="url(#softShadow)">
     <path d="M474 454c0-116 58-218 130-218s130 102 130 218" fill="none" stroke="#2c4f67" stroke-width="38" stroke-linecap="round"/>

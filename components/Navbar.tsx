@@ -27,6 +27,20 @@ export default function Navbar() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const previous = document.body.style.overflow;
+    const previousTouch = document.body.style.touchAction;
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    }
+    return () => {
+      document.body.style.overflow = previous;
+      document.body.style.touchAction = previousTouch;
+    };
+  }, [open]);
+
   return (
     <header className={`site-header ${scrolled ? "site-header--scrolled" : ""}`}>
       <nav aria-label="Primary" className="container-ph site-nav">
