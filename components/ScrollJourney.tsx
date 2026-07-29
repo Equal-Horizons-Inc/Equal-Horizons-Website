@@ -110,6 +110,13 @@ export default function ScrollJourney() {
                   : { y: islandY, rotate: islandRotate }
               }
             >
+              <svg
+                className="journey-island-rock"
+                viewBox="0 0 200 96"
+                preserveAspectRatio="none"
+              >
+                <path d="M4 3 C34 13 65 17 100 17 C135 17 166 13 196 3 C181 31 160 60 128 91 C119 99 84 94 72 88 C42 58 20 30 4 3 Z" />
+              </svg>
               <span className="journey-tree-trunk" />
               <span className="journey-tree-crown" />
               <motion.span

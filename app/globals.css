@@ -1131,8 +1131,15 @@ a {
 .sunrise-cta-copy > p:not(.editorial-index) {
   max-width: 650px;
   margin-inline: auto;
-  color: #425970;
+  padding: 0.8rem 1.15rem;
+  color: var(--ink);
+  border: 1px solid rgba(41, 76, 98, 0.18);
+  border-radius: 16px;
+  background: rgba(255, 253, 247, 0.88);
+  box-shadow: 0 8px 28px rgba(41, 76, 98, 0.1);
+  backdrop-filter: blur(10px);
   font-size: 1.05rem;
+  font-weight: 520;
 }
 
 .sunrise-cta-copy .hero-actions {
@@ -1828,18 +1835,22 @@ a {
   transform-origin: center;
 }
 
-.journey-floating-island::after {
-  content: "";
+.journey-island-rock {
   position: absolute;
-  left: 26px;
-  right: 26px;
-  bottom: -58px;
-  height: 82px;
   z-index: -1;
-  border: 3px solid var(--outline);
-  border-top: 0;
-  clip-path: polygon(0 0, 100% 0, 68% 100%, 35% 82%);
-  background: linear-gradient(180deg, #7064bd, #50459c);
+  left: 26px;
+  bottom: -62px;
+  width: calc(100% - 52px);
+  height: 82px;
+  overflow: visible;
+  filter: drop-shadow(0 3px 0 var(--outline));
+}
+
+.journey-island-rock path {
+  fill: #6255b5;
+  stroke: var(--outline);
+  stroke-width: 3.5;
+  vector-effect: non-scaling-stroke;
 }
 
 .journey-tree-trunk {
