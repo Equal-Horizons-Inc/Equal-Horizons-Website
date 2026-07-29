@@ -1,6 +1,6 @@
 # Equal Horizons
 
-The website for **Equal Horizons**, an early-stage nonprofit initiative focused on making assistive technology more affordable and accessible.
+The website for **Equal Horizons**, a student-founded, early-stage initiative focused on making assistive technology more affordable and accessible.
 
 Built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion, ready to deploy on Vercel.
 
@@ -8,7 +8,7 @@ Built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion, re
 
 - **Next.js 14** (App Router) + **TypeScript**
 - **Tailwind CSS** for styling
-- **Framer Motion** for scroll reveals, staggered animations, and micro-interactions
+- **Framer Motion** for scroll-linked storytelling, sticky scene transitions, parallax, and micro-interactions
 - **Resend** for the contact form's transactional email
 - **lucide-react** for lightweight, consistent iconography
 - Fonts: **Sora** (headings) and **Inter** (body), loaded via `next/font/google`
@@ -25,7 +25,7 @@ app/
   api/contact/route.ts       Contact form email API (Resend)
   layout.tsx                 Root layout, fonts, metadata
   globals.css                 Global styles & design tokens
-components/                  Navbar, Footer, cards, form, animated visual
+components/                  Navbar, Footer, form, animated visual, scroll storytelling
 lib/motion.ts                 Shared Framer Motion variants
 ```
 
@@ -100,3 +100,17 @@ This site intentionally reflects Equal Horizons' current, early stage:
 - Visible focus rings on all interactive elements (`:focus-visible`).
 - Form fields use associated `<label>`s and the submission status region uses `aria-live="polite"`.
 - All decorative motion respects `prefers-reduced-motion`.
+
+## Animated design preview
+
+The redesign includes an original cel-shaded horizon environment rather than a stock image or prebuilt 3D scene.
+
+- Open `preview/index.html` to review the standalone animated composition.
+- Desktop and mobile captures are in `preview/screenshots/`.
+- Motion previews are in `preview/video/`.
+- The reusable animated artwork lives at `public/horizon-scene.svg`.
+- The React parallax wrapper lives at `components/AnimeHorizonScene.tsx`.
+
+The hero responds to pointer movement and page scroll, uses separate cloud/flower/tree/orbit/petal animation loops, and respects `prefers-reduced-motion`.
+
+The homepage also includes a fixed page-progress line, a sticky four-stage process scene whose sun, clouds, route, island, orbit, and flower evolve with scroll position, plus scroll-linked project entrances. No technology-stack checklist, emoji feature list, or template-style “what makes us different” block appears in the public interface.

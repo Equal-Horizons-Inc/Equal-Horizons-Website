@@ -1,4 +1,4 @@
-// File: /Users/sahilsingla/Coding/Equal-Horizons-Github/app/layout.tsx
+// File: /Users/mithilesshb/Documents/GitHub/Equal-Horizons-Github/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

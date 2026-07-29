@@ -155,7 +155,7 @@ export default function ContactForm() {
             type="text"
             autoComplete="organization"
             className="mt-2 w-full rounded-lg border border-ink/15 bg-paper px-4 py-3 font-inter text-sm text-graphite placeholder:text-graphite/40 focus:border-horizon"
-            placeholder="School, company, or nonprofit"
+            placeholder="School, company, or organization"
           />
         </div>
 

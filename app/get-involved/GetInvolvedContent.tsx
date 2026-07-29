@@ -25,7 +25,7 @@ const OPTIONS = [
     icon: <Users size={22} strokeWidth={2} aria-hidden="true" />,
     title: "Mentor",
     description:
-      "Share domain expertise — accessibility, hardware, nonprofit strategy — with a young team that's building carefully.",
+      "Share domain expertise — accessibility, hardware, community partnerships — with a young team that's building carefully.",
     reason: "Mentor",
   },
   {

@@ -1,4 +1,4 @@
-// File: /Users/sahilsingla/Coding/Equal-Horizons-Github/app/get-involved/page.tsx
+// File: /Users/mithilesshb/Documents/GitHub/Equal-Horizons-Github/app/get-involved/page.tsx
 import * as entry from '../../../../app/get-involved/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

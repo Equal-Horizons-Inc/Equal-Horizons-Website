@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     template: "%s | Equal Horizons",
   },
   description:
-    "Equal Horizons is an early-stage nonprofit initiative building a future where assistive technology is practical, affordable, and designed around the people who need it most.",
+    "Equal Horizons is a student-founded, early-stage initiative exploring assistive technology that is affordable, accessible, and designed around real human needs.",
   metadataBase: new URL("https://equalhorizons.org"),
   openGraph: {
     title: "Equal Horizons",
     description:
-      "Technology that makes independence accessible. Equal Horizons is an early-stage nonprofit initiative focused on affordable, accessible assistive technology.",
+      "A student-founded initiative exploring affordable, accessible, human-centered assistive technology.",
     type: "website",
   },
 };

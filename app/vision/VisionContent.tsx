@@ -87,7 +87,7 @@ export default function VisionContent() {
           <VisionCard
             title="Affordability research"
             status="in development"
-            description="Understanding the real cost barriers behind existing assistive devices, and where nonprofit or open-hardware models could bring prices down."
+            description="Understanding the real cost barriers behind existing assistive devices, and where open-hardware or community-led models could bring prices down."
           />
           <VisionCard
             title="Adaptive interfaces"
@@ -111,7 +111,7 @@ export default function VisionContent() {
             </h2>
             <p className="body-copy mt-5">
               None of the areas above are finished products, and we won't
-              describe them that way. As an early-stage nonprofit, our job
+              describe them that way. As an early-stage initiative, our job
               right now is to research carefully, prototype responsibly, and
               stay close to the community we're building for — one honest
               step at a time.

@@ -94,7 +94,7 @@ export default function AboutContent() {
               looks good in a pitch deck.
             </p>
             <p className="body-copy">
-              Today, Equal Horizons is an early-stage nonprofit initiative.
+              Today, Equal Horizons is a student-founded, early-stage initiative.
               We haven't launched a product yet, and we're not in a hurry to.
               We're building the foundation — relationships, research, and a
               clear sense of what "affordable and accessible" actually
