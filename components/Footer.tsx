@@ -6,6 +6,7 @@ const links = [
   { href: "/vision", label: "Projects" },
   { href: "/get-involved", label: "Get involved" },
   { href: "/contact", label: "Contact" },
+  { href: "/terms", label: "Terms of service" },
 ];
 
 export default function Footer() {
@@ -46,7 +47,10 @@ export default function Footer() {
 
       <div className="container-ph footer-bottom">
         <p>© {new Date().getFullYear()} Equal Horizons</p>
-        <p>Early-stage · Student-founded · Built with accessibility in mind</p>
+        <p>
+          Early-stage · Student-founded ·{" "}
+          <Link href="/terms">Terms of service</Link>
+        </p>
       </div>
     </footer>
   );

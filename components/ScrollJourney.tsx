@@ -148,10 +148,6 @@ export default function ScrollJourney() {
             </div>
           </motion.div>
 
-          <div className="journey-now" aria-live="polite">
-            <span>{steps[activeStep].number}</span>
-            <p>{steps[activeStep].label}</p>
-          </div>
         </div>
 
         <div className="journey-steps">

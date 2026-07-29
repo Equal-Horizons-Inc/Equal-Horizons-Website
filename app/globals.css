@@ -1266,8 +1266,14 @@ a {
 @media (max-width: 620px) {
   .hero-shell { border-bottom-width: 1px; }
   .hero-layout { padding-top: 6.3rem; padding-bottom: 3.6rem; }
+  .hero-copy { width: 100%; min-width: 0; }
   .hero-kicker { font-size: 0.63rem; }
-  .hero-title { margin-top: 1.25rem; font-size: clamp(3.1rem, 16.5vw, 4.5rem); line-height: 0.94; }
+  .hero-title {
+    max-width: 100%;
+    margin-top: 1.25rem;
+    font-size: clamp(2.85rem, 13vw, 3.6rem);
+    line-height: 0.96;
+  }
   .hero-lede { font-size: 1rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .action-button { width: 100%; }
@@ -1706,16 +1712,14 @@ a {
 
 .journey-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.72fr);
-  gap: clamp(4rem, 8vw, 8rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(3rem, 6vw, 5rem);
   align-items: start;
 }
 
 .journey-sticky {
-  position: sticky;
-  top: 116px;
+  position: relative;
   min-width: 0;
-  padding-bottom: 2rem;
 }
 
 .journey-heading {
@@ -1744,8 +1748,11 @@ a {
   position: relative;
   min-height: 430px;
   overflow: hidden;
+  border-inline: 2px solid var(--outline);
   border-block: 2px solid var(--outline);
+  border-radius: 28px;
   background: #dff5ff;
+  box-shadow: 8px 10px 0 rgba(112, 86, 221, 0.18);
   transition: background-color 280ms ease;
 }
 
@@ -1806,8 +1813,8 @@ a {
 .journey-floating-island {
   position: absolute;
   z-index: 4;
-  top: 126px;
-  left: 50%;
+  top: 110px;
+  left: 54%;
   width: 238px;
   height: 128px;
   border: 3px solid var(--outline);
@@ -1942,37 +1949,17 @@ a {
   scale: 1.2;
 }
 
-.journey-now {
-  display: flex;
-  align-items: baseline;
-  gap: 0.8rem;
-  padding-top: 1rem;
-  border-bottom: 1px solid rgba(41, 76, 98, 0.28);
-}
-
-.journey-now span {
-  color: var(--violet);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
-  font-style: italic;
-}
-
-.journey-now p {
-  margin: 0;
-  color: var(--ink);
-  font-size: 0.78rem;
-  font-weight: 850;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
 .journey-steps {
-  padding-top: 12rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 3rem;
+  padding-top: 0;
+  border-top: 1.5px solid rgba(41, 76, 98, 0.3);
 }
 
 .journey-step {
   display: flex;
-  min-height: 72vh;
+  min-height: 390px;
   flex-direction: column;
   justify-content: center;
   padding: 4rem 0;
@@ -1981,7 +1968,7 @@ a {
 }
 
 .journey-step:first-child {
-  border-top: 1.5px solid rgba(41, 76, 98, 0.3);
+  border-top: 0;
 }
 
 .journey-step-number {
@@ -2011,12 +1998,12 @@ a {
 .journey-step > p:last-child {
   max-width: 520px;
   margin: 0;
-  color: #526377;
+  color: #40546a;
   line-height: 1.8;
 }
 
 .journey-step:not(.is-active) {
-  opacity: 0.58;
+  opacity: 0.86;
 }
 
 .project-row {
@@ -2034,17 +2021,8 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .journey-sticky {
-    position: relative;
-    top: auto;
-  }
-
   .journey-art {
     min-height: 400px;
-  }
-
-  .journey-steps {
-    padding-top: 1.5rem;
   }
 
   .journey-step {
@@ -2068,13 +2046,19 @@ a {
 
   .journey-art {
     min-height: 340px;
-    margin-inline: -16px;
+    margin-inline: 0;
+    border-radius: 20px;
+    box-shadow: 5px 6px 0 rgba(112, 86, 221, 0.18);
   }
 
   .journey-floating-island {
-    top: 112px;
-    left: 44%;
-    scale: 0.78;
+    top: 90px;
+    left: 46%;
+    scale: 0.68;
+  }
+
+  .journey-steps {
+    grid-template-columns: 1fr;
   }
 
   .journey-step-number {
@@ -2089,5 +2073,86 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .journey-step:not(.is-active) {
     opacity: 1;
+  }
+}
+
+.footer-bottom a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.footer-bottom a:hover {
+  color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Legal pages                                                                */
+/* -------------------------------------------------------------------------- */
+
+.legal-page {
+  padding: clamp(8rem, 14vw, 11rem) 0 clamp(5rem, 9vw, 8rem);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(158, 220, 255, 0.5), transparent 28rem),
+    var(--paper);
+}
+
+.legal-inner {
+  width: min(100% - 48px, 820px);
+  margin-inline: auto;
+}
+
+.legal-inner h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(3rem, 8vw, 5.8rem);
+  line-height: 0.96;
+}
+
+.legal-updated {
+  margin-bottom: 3.5rem;
+  color: #526377;
+}
+
+.legal-section {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(41, 76, 98, 0.24);
+}
+
+.legal-section h2 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+}
+
+.legal-section p,
+.legal-section li {
+  color: #40546a;
+}
+
+.legal-section a {
+  color: var(--violet-dark);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 820px) {
+  .menu-toggle {
+    right: max(20px, env(safe-area-inset-right));
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-scene-wrap {
+    margin: 0 -0.75rem;
+  }
+
+  .anime-horizon-scene {
+    width: calc(100% - 8px);
+  }
+
+  .menu-toggle {
+    right: max(18px, env(safe-area-inset-right));
+  }
+
+  .legal-inner {
+    width: min(100% - 32px, 820px);
   }
 }
