@@ -1,5 +1,6 @@
 "use client";
 
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,6 +18,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [portalReady, setPortalReady] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -26,6 +28,10 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => setOpen(false), [pathname]);
+
+  useEffect(() => {
+    setPortalReady(true);
+  }, []);
 
   useEffect(() => {
     if (typeof document === "undefined") return;
@@ -84,40 +90,45 @@ export default function Navbar() {
         </button>
       </nav>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            id="mobile-navigation"
-            initial={{ clipPath: "inset(0 0 100% 0)" }}
-            animate={{ clipPath: "inset(0 0 0% 0)" }}
-            exit={{ clipPath: "inset(0 0 100% 0)" }}
-            transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
-            className="mobile-navigation"
-          >
-            <div className="container-ph mobile-navigation-inner">
-              <p>Explore the horizon</p>
-              <ul>
-                {LINKS.map((link, index) => (
-                  <motion.li
-                    key={link.href}
-                    initial={{ opacity: 0, y: 18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.08 + index * 0.06 }}
-                  >
-                    <Link href={link.href}>
-                      <span>0{index + 1}</span>
-                      {link.label}
+      {portalReady && typeof document !== "undefined"
+        ? createPortal(
+            <AnimatePresence>
+              {open && (
+                <motion.div
+                  id="mobile-navigation"
+                  initial={{ clipPath: "inset(0 0 100% 0)" }}
+                  animate={{ clipPath: "inset(0 0 0% 0)" }}
+                  exit={{ clipPath: "inset(0 0 100% 0)" }}
+                  transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
+                  className="mobile-navigation"
+                >
+                  <div className="container-ph mobile-navigation-inner">
+                    <p>Explore the horizon</p>
+                    <ul>
+                      {LINKS.map((link, index) => (
+                        <motion.li
+                          key={link.href}
+                          initial={{ opacity: 0, y: 18 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.08 + index * 0.06 }}
+                        >
+                          <Link href={link.href}>
+                            <span>0{index + 1}</span>
+                            {link.label}
+                          </Link>
+                        </motion.li>
+                      ))}
+                    </ul>
+                    <Link href="/contact" className="mobile-contact-link">
+                      Start a conversation <ArrowUpRight size={20} aria-hidden="true" />
                     </Link>
-                  </motion.li>
-                ))}
-              </ul>
-              <Link href="/contact" className="mobile-contact-link">
-                Start a conversation <ArrowUpRight size={20} aria-hidden="true" />
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>,
+            document.body
+          )
+        : null}
     </header>
   );
 }
