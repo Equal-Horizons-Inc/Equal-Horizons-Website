@@ -114,3 +114,14 @@ The redesign includes an original cel-shaded horizon environment rather than a s
 The hero responds to pointer movement and page scroll, uses separate cloud/flower/tree/orbit/petal animation loops, and respects `prefers-reduced-motion`.
 
 The homepage also includes a fixed page-progress line, a sticky four-stage process scene whose sun, clouds, route, island, orbit, and flower evolve with scroll position, plus scroll-linked project entrances. No technology-stack checklist, emoji feature list, or template-style “what makes us different” block appears in the public interface.
+
+## Copyright and license
+
+Copyright © 2026 Equal Horizons. All rights reserved.
+
+This is proprietary software, not open-source software. No permission is
+granted to copy, modify, redistribute, publish, sell, or create derivative
+works from the repository's original code, content, design, branding, or
+artwork. See [LICENSE](LICENSE) and [NOTICE](NOTICE) for details.
+
+Third-party dependencies remain subject to their respective licenses.

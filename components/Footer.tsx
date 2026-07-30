@@ -46,7 +46,9 @@ export default function Footer() {
       </div>
 
       <div className="container-ph footer-bottom">
-        <p>© {new Date().getFullYear()} Equal Horizons</p>
+        <p>
+          © {new Date().getFullYear()} Equal Horizons. All rights reserved.
+        </p>
         <p>
           Early-stage · Student-founded ·{" "}
           <Link href="/terms">Terms of service</Link>

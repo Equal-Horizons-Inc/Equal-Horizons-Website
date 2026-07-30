@@ -67,11 +67,25 @@ export default function TermsPage() {
         <div className="legal-section">
           <h2>6. Intellectual property</h2>
           <p>
-            Unless otherwise stated, the site&apos;s original text, branding,
-            illustrations, and design belong to Equal Horizons or their
-            respective licensors. You may view and share links to the site, but
-            may not reproduce or commercially exploit its content without
-            permission.
+            Unless otherwise stated, all original source code, text, branding,
+            logos, illustrations, graphics, audiovisual material, page layouts,
+            and design elements on this site are owned by Equal Horizons and
+            are protected by copyright, trademark, and other applicable laws.
+            All rights are reserved.
+          </p>
+          <p>
+            You may access and view the site for personal, non-commercial
+            purposes and share links to its public pages. You may not copy,
+            reproduce, download, scrape, republish, modify, translate,
+            distribute, display, sell, license, create derivative works from,
+            or commercially exploit any protected material without prior
+            written permission from Equal Horizons, except where applicable law
+            expressly permits otherwise.
+          </p>
+          <p>
+            Access to the site does not grant you any license or ownership
+            interest in its content. Third-party material remains the property
+            of its respective owners and is subject to their terms.
           </p>
         </div>
 
