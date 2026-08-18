@@ -183,7 +183,7 @@ export default function HomePage() {
             <div className="founder-line">
               <span>MB</span>
               <div>
-                <h3>Mithilesh Bhasker</h3>
+                <h3>Mithilessh Saai Bhasker</h3>
                 <p>Co-Founder · Research and product thinking</p>
               </div>
             </div>

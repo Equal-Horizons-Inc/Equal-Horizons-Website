@@ -123,7 +123,7 @@ export default function AboutContent() {
           >
             <FounderCard
               initials="MB"
-              name="Mithilesh Bhasker"
+              name="Mithilessh Saai Bhasker"
               role="Co-Founder"
               bio="Leads research and product direction for Equal Horizons, spending most of his time listening — to the disability community, to educators, and to the gaps in tools that already exist — before shaping what we build next."
             />
