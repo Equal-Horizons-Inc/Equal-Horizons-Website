@@ -6,7 +6,6 @@ import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "fr
 import { ArrowDownRight, ArrowUpRight, ArrowRight } from "@phosphor-icons/react";
 import AnimeHorizonScene from "@/components/AnimeHorizonScene";
 import Reveal from "@/components/Reveal";
-import ScrollJourney from "@/components/ScrollJourney";
 import ScrollProgress from "@/components/ScrollProgress";
 import SpatialProjectDeck from "@/components/SpatialProjectDeck";
 import { staggerContainer, staggerItem } from "@/lib/motion";
@@ -85,15 +84,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="motion-ribbon" aria-hidden="true">
-        <div className="motion-ribbon-track">
-          <span>LISTEN</span><i>✦</i><span>PROTOTYPE</span><i>✦</i><span>LEARN</span><i>✦</i><span>OPEN</span><i>✦</i>
-          <span>LISTEN</span><i>✦</i><span>PROTOTYPE</span><i>✦</i><span>LEARN</span><i>✦</i><span>OPEN</span><i>✦</i>
-        </div>
-      </div>
-
-      <ImmersiveHorizon3D />
-
       <section id="mission" className="mission-section mission-section--ultimate">
         <div className="container-ph mission-grid">
           <Reveal className="mission-copy-block">
@@ -125,7 +115,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ScrollJourney />
+      <ImmersiveHorizon3D />
       <PrototypeLab3D />
       <SpatialProjectDeck />
 

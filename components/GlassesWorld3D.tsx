@@ -92,10 +92,13 @@ function Scene() {
         makeDefault
         enableDamping
         dampingFactor={0.065}
-        enablePan={false}
+        enablePan
+        screenSpacePanning
         enableZoom
-        zoomSpeed={0.72}
-        rotateSpeed={0.62}
+        zoomToCursor
+        zoomSpeed={0.82}
+        panSpeed={0.55}
+        rotateSpeed={0.68}
         minDistance={2.45}
         maxDistance={8.2}
         minPolarAngle={0.48}

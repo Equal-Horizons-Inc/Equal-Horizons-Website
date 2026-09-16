@@ -108,7 +108,7 @@
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }/*
-! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.13 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -499,7 +499,7 @@ video {
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
-[hidden]:where(:not([hidden="until-found"])) {
+[hidden] {
   display: none;
 }
 .sr-only {
@@ -785,7 +785,7 @@ video {
 }
 .\!bg-white {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 .bg-horizon\/10 {
   background-color: rgb(112 86 221 / 0.1);
@@ -795,18 +795,18 @@ video {
 }
 .bg-ink {
   --tw-bg-opacity: 1;
-  background-color: rgb(19 35 59 / var(--tw-bg-opacity, 1));
+  background-color: rgb(19 35 59 / var(--tw-bg-opacity));
 }
 .bg-mist {
   --tw-bg-opacity: 1;
-  background-color: rgb(239 248 242 / var(--tw-bg-opacity, 1));
+  background-color: rgb(239 248 242 / var(--tw-bg-opacity));
 }
 .bg-mist\/40 {
   background-color: rgb(239 248 242 / 0.4);
 }
 .bg-paper {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 253 247 / var(--tw-bg-opacity, 1));
+  background-color: rgb(255 253 247 / var(--tw-bg-opacity));
 }
 .bg-sky\/20 {
   background-color: rgb(158 220 255 / 0.2);
@@ -816,7 +816,7 @@ video {
 }
 .bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-white\/70 {
   background-color: rgb(255 255 255 / 0.7);
@@ -930,11 +930,11 @@ video {
 }
 .\!text-ink {
   --tw-text-opacity: 1 !important;
-  color: rgb(19 35 59 / var(--tw-text-opacity, 1)) !important;
+  color: rgb(19 35 59 / var(--tw-text-opacity)) !important;
 }
 .text-graphite {
   --tw-text-opacity: 1;
-  color: rgb(64 80 106 / var(--tw-text-opacity, 1));
+  color: rgb(64 80 106 / var(--tw-text-opacity));
 }
 .text-graphite\/50 {
   color: rgb(64 80 106 / 0.5);
@@ -947,22 +947,22 @@ video {
 }
 .text-horizon {
   --tw-text-opacity: 1;
-  color: rgb(112 86 221 / var(--tw-text-opacity, 1));
+  color: rgb(112 86 221 / var(--tw-text-opacity));
 }
 .text-ink {
   --tw-text-opacity: 1;
-  color: rgb(19 35 59 / var(--tw-text-opacity, 1));
+  color: rgb(19 35 59 / var(--tw-text-opacity));
 }
 .text-ink\/70 {
   color: rgb(19 35 59 / 0.7);
 }
 .text-red-600 {
   --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -1034,7 +1034,10 @@ video {
 
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: auto;
 }
 
 html,
@@ -3724,44 +3727,319 @@ h1, h2, h3, h4 {
 
   .prototype-3d-stage { height: min(68vh, 500px); }
 }
+
+/* ========================================================================== 
+   FINAL PROCESS OCEAN — responsive, single source of motion, no meter/bar.
+   The former illustrated ScrollJourney was removed from the home page and its
+   four process steps now live inside this one ocean sequence.
+   ========================================================================== */
+.horizon-3d-section {
+  position: relative;
+  height: 400svh;
+  background: #020714;
+}
+
+.horizon-3d-sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  background: #07101f;
+}
+
+.horizon-sky {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.horizon-sky-night,
+.horizon-sky-dawn,
+.horizon-stars {
+  position: absolute;
+  inset: 0;
+}
+
+.horizon-sky-night {
+  background:
+    radial-gradient(circle at 50% 52%, rgba(62, 69, 100, .40), transparent 42%),
+    linear-gradient(180deg, #08101f 0%, #111a31 56%, #313447 100%);
+}
+
+.horizon-sky-dawn {
+  background:
+    radial-gradient(circle at 61% 54%, rgba(255, 185, 137, .62), transparent 32%),
+    linear-gradient(180deg, #5b7899 0%, #c18c83 52%, #e99f85 100%);
+  will-change: opacity;
+}
+
+.horizon-stars {
+  background-image:
+    radial-gradient(circle at 4% 8%, rgba(255,255,255,.9) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 13% 20%, rgba(168,205,255,.8) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 24% 7%, rgba(255,255,255,.85) 0 1.1px, transparent 1.7px),
+    radial-gradient(circle at 34% 28%, rgba(255,221,190,.86) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 43% 13%, rgba(255,255,255,.86) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 55% 24%, rgba(169,205,255,.9) 0 1.15px, transparent 1.8px),
+    radial-gradient(circle at 67% 9%, rgba(255,255,255,.8) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 78% 29%, rgba(255,217,179,.82) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 87% 12%, rgba(255,255,255,.9) 0 1.2px, transparent 1.8px),
+    radial-gradient(circle at 95% 35%, rgba(176,211,255,.85) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 8% 41%, rgba(255,255,255,.62) 0 .8px, transparent 1.4px),
+    radial-gradient(circle at 29% 45%, rgba(255,255,255,.8) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 49% 39%, rgba(255,255,255,.72) 0 .9px, transparent 1.5px),
+    radial-gradient(circle at 71% 44%, rgba(255,255,255,.76) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 91% 48%, rgba(255,255,255,.76) 0 .9px, transparent 1.5px);
+  filter: drop-shadow(0 0 2px rgba(184, 213, 255, .35));
+  will-change: opacity;
+}
+
+.horizon-sun,
+.horizon-sun-glow {
+  position: absolute;
+  left: 66%;
+  top: 20%;
+  translate: -50% -50%;
+  width: clamp(88px, 9.2vw, 156px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: left, top, transform, opacity;
+}
+
+.horizon-sun {
+  z-index: 1;
+  background: radial-gradient(circle at 42% 38%, #fff8dc 0 14%, #ffe0a7 47%, #ffad6e 100%);
+  box-shadow: 0 0 42px rgba(255, 187, 116, .32);
+}
+
+.horizon-sun-glow {
+  z-index: 0;
+  width: clamp(160px, 18vw, 300px);
+  background: radial-gradient(circle, rgba(255, 177, 112, .44) 0%, rgba(255, 158, 104, .16) 42%, transparent 72%);
+  filter: blur(10px);
+}
+
+.horizon-3d-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.horizon-3d-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.horizon-3d-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(2,7,20,.74) 0%, rgba(2,7,20,.40) 33%, rgba(2,7,20,.04) 66%),
+    linear-gradient(0deg, rgba(2,7,20,.28), transparent 36%);
+}
+
+.horizon-3d-copy {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(5rem, 10vh, 7rem);
+  padding-bottom: clamp(4rem, 8vh, 6rem);
+  pointer-events: none;
+}
+
+.horizon-3d-kicker {
+  position: absolute;
+  top: clamp(4.6rem, 9vh, 6.5rem);
+  left: 0;
+  margin: 0;
+  color: rgba(255,255,255,.58);
+  font-family: var(--font-sora);
+  font-size: clamp(.62rem, .8vw, .74rem);
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.horizon-3d-steps {
+  position: relative;
+  width: min(620px, 47vw);
+  height: min(440px, 54vh);
+  min-height: 300px;
+}
+
+.horizon-3d-step {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform-origin: left center;
+  will-change: transform, opacity;
+}
+
+.horizon-step-meta {
+  display: flex;
+  align-items: baseline;
+  gap: .72rem;
+  margin-bottom: .7rem;
+}
+
+.horizon-step-meta span {
+  color: #ffd79b;
+  font-family: var(--font-editorial);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-style: italic;
+}
+
+.horizon-step-meta b {
+  color: rgba(255,255,255,.66);
+  font-family: var(--font-sora);
+  font-size: .66rem;
+  font-weight: 750;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.horizon-3d-step h2 {
+  max-width: 12ch;
+  margin: 0 0 .95rem;
+  color: #fffdf7;
+  font-family: var(--font-sora);
+  font-size: clamp(2.45rem, 4.5vw, 4.8rem);
+  font-weight: 680;
+  line-height: .95;
+  letter-spacing: -.052em;
+  text-wrap: balance;
+}
+
+.horizon-3d-step p {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255,255,255,.72);
+  font-size: clamp(.92rem, 1.12vw, 1.06rem);
+  line-height: 1.62;
+}
+
+/* The old NIGHT—DAWN progress pill and the previous marquee were intentionally
+   removed from the render tree. Keep these hidden if stale markup is cached. */
+.horizon-3d-meter,
+.motion-ribbon {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .horizon-3d-section { height: 360svh; }
+  .horizon-3d-vignette {
+    background:
+      linear-gradient(0deg, rgba(2,7,20,.78) 0%, rgba(2,7,20,.36) 48%, rgba(2,7,20,.06) 76%);
+  }
+  .horizon-3d-copy {
+    justify-content: flex-end;
+    padding-top: 5.5rem;
+    padding-bottom: clamp(5.6rem, 13vh, 8rem);
+  }
+  .horizon-3d-kicker { top: 5.1rem; }
+  .horizon-3d-steps {
+    width: 100%;
+    height: min(350px, 44vh);
+    min-height: 260px;
+  }
+  .horizon-3d-step { justify-content: flex-end; }
+  .horizon-3d-step h2 {
+    max-width: 13ch;
+    font-size: clamp(2.35rem, 9.4vw, 4rem);
+  }
+  .horizon-3d-step p { max-width: 38rem; }
+  .horizon-sun,
+  .horizon-sun-glow { left: 64%; }
+}
+
+@media (max-width: 560px) {
+  .horizon-3d-section { height: 345svh; }
+  .horizon-3d-copy { padding-bottom: 5.4rem; }
+  .horizon-3d-kicker { top: 4.8rem; }
+  .horizon-3d-steps { height: min(325px, 42vh); }
+  .horizon-3d-step h2 { font-size: clamp(2.05rem, 10.7vw, 3.2rem); }
+  .horizon-3d-step p { font-size: .9rem; line-height: 1.54; }
+  .horizon-sun,
+  .horizon-sun-glow { left: 68%; }
+}
+
+@media (min-width: 901px) and (max-height: 720px) {
+  .horizon-3d-kicker { top: 4.2rem; }
+  .horizon-3d-steps { height: 320px; }
+  .horizon-3d-step h2 { font-size: clamp(2.2rem, 4vw, 3.65rem); }
+  .horizon-3d-step p { font-size: .9rem; line-height: 1.5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .horizon-3d-section { height: 120svh; }
+}
+
 .placeholder\:text-graphite\/40::-moz-placeholder {
   color: rgb(64 80 106 / 0.4);
 }
+
 .placeholder\:text-graphite\/40::placeholder {
   color: rgb(64 80 106 / 0.4);
 }
+
 .hover\:-translate-y-0\.5:hover {
   --tw-translate-y: -0.125rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .hover\:-translate-y-1\.5:hover {
   --tw-translate-y: -0.375rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .hover\:border-horizon\/30:hover {
   border-color: rgb(112 86 221 / 0.3);
 }
+
 .hover\:border-horizon\/40:hover {
   border-color: rgb(112 86 221 / 0.4);
 }
+
 .hover\:bg-horizon:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(112 86 221 / var(--tw-bg-opacity, 1));
+  background-color: rgb(112 86 221 / var(--tw-bg-opacity));
 }
+
 .hover\:text-horizon:hover {
   --tw-text-opacity: 1;
-  color: rgb(112 86 221 / var(--tw-text-opacity, 1));
+  color: rgb(112 86 221 / var(--tw-text-opacity));
 }
+
 .hover\:shadow-lift:hover {
   --tw-shadow: 0 24px 48px -16px rgba(41, 76, 98, 0.32);
   --tw-shadow-colored: 0 24px 48px -16px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
 .hover\:shadow-soft:hover {
   --tw-shadow: 0 20px 60px -20px rgba(41, 76, 98, 0.25);
   --tw-shadow-colored: 0 20px 60px -20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
 .focus\:not-sr-only:focus {
   position: static;
   width: auto;
@@ -3772,74 +4050,94 @@ h1, h2, h3, h4 {
   clip: auto;
   white-space: normal;
 }
+
 .focus\:fixed:focus {
   position: fixed;
 }
+
 .focus\:left-4:focus {
   left: 1rem;
 }
+
 .focus\:top-4:focus {
   top: 1rem;
 }
+
 .focus\:z-\[100\]:focus {
   z-index: 100;
 }
+
 .focus\:rounded-full:focus {
   border-radius: 9999px;
 }
+
 .focus\:border-horizon:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(112 86 221 / var(--tw-border-opacity, 1));
+  border-color: rgb(112 86 221 / var(--tw-border-opacity));
 }
+
 .focus\:bg-ink:focus {
   --tw-bg-opacity: 1;
-  background-color: rgb(19 35 59 / var(--tw-bg-opacity, 1));
+  background-color: rgb(19 35 59 / var(--tw-bg-opacity));
 }
+
 .focus\:px-5:focus {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
+
 .focus\:py-3:focus {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+
 .focus\:text-sm:focus {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+
 .focus\:font-semibold:focus {
   font-weight: 600;
 }
+
 .focus\:text-white:focus {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 .focus-visible\:-translate-y-0\.5:focus-visible {
   --tw-translate-y: -0.125rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .disabled\:cursor-not-allowed:disabled {
   cursor: not-allowed;
 }
+
 .disabled\:opacity-60:disabled {
   opacity: 0.6;
 }
+
 .disabled\:hover\:translate-y-0:hover:disabled {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group:hover .group-hover\:translate-x-1 {
   --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group:hover .group-hover\:bg-horizon {
   --tw-bg-opacity: 1;
-  background-color: rgb(112 86 221 / var(--tw-bg-opacity, 1));
+  background-color: rgb(112 86 221 / var(--tw-bg-opacity));
 }
+
 .group:hover .group-hover\:text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 @media (min-width: 640px) {
 
   .sm\:grid-cols-2 {
@@ -3886,6 +4184,7 @@ h1, h2, h3, h4 {
     line-height: 1;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:col-span-2 {

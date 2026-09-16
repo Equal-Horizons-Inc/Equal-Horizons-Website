@@ -23,7 +23,7 @@ export default function PrototypeLab3D() {
         <motion.div className="prototype-3d-copy" style={reduceMotion ? undefined : { y: copyY, opacity: copyOpacity }}>
           <p className="editorial-index">03 / PROTOTYPE LAB</p>
           <h2 className="display-heading">Don’t just look at the idea. <span>Inspect it.</span></h2>
-          <p className="prototype-3d-lede">This is the actual smart-glasses model from the prototype work. Drag around the object, scroll or pinch to zoom, and inspect the form from the angle you want.</p>
+          <p className="prototype-3d-lede">This is the actual smart-glasses model from the prototype work. Drag to orbit, right-drag to pan, and scroll or pinch to zoom so you can inspect the form from the angle you want.</p>
           <div className="prototype-3d-facts">
             <div><span>01</span><p>Wearable form first</p></div>
             <div><span>02</span><p>Space for visual cues</p></div>
@@ -37,7 +37,7 @@ export default function PrototypeLab3D() {
         >
           <div className="prototype-3d-corner prototype-3d-corner--a" />
           <div className="prototype-3d-corner prototype-3d-corner--b" />
-          <div className="prototype-3d-canvas"><GlassesWorld3D /></div>
+          <div className="prototype-3d-canvas" data-lenis-prevent data-lenis-prevent-wheel data-lenis-prevent-touch><GlassesWorld3D /></div>
           <div className="prototype-3d-tag prototype-3d-tag--a"><span>LIVE MODEL</span> GLB / WEBGL</div>
           <div className="prototype-3d-tag prototype-3d-tag--b"><span>VIEWER</span> ORBIT / ZOOM</div>
           <div className="prototype-3d-drag">

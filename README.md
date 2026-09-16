@@ -1,51 +1,53 @@
-# Equal Horizons — Ultimate 3D Motion Build
+# Equal Horizons — final 3D responsive build
 
-This build uses **Equal-Horizons-Github-main(3)** as the design/content base and adds the strongest spatial interaction ideas from the alternate concept without replacing the original visual identity.
+This build keeps the current Equal Horizons visual system and merges the strongest 3D/scroll ideas into it without duplicating sections.
 
-## What changed
+## What changed in this pass
 
-- Real WebGL night-to-dawn horizon using custom Three.js shaders.
-- Animated 3D water surface with pointer-reactive camera movement.
-- Actual `glasses.glb` model rendered in-browser, not a flattened image.
-- Drag-to-rotate smart-glasses model with floating motion, reactive lighting, shadows, particles, and orbiting HUD rings.
-- Lenis smooth scrolling.
-- Scroll-linked hero depth/parallax.
-- 3D perspective treatment for the mission portal.
-- Pointer-tilt exploration cards with layered Z-depth and animated spatial diagrams.
-- Mobile/responsive fallbacks and `prefers-reduced-motion` handling.
+- Removed the old moving text/marquee bar.
+- Removed the separate illustrated **“A path from listening to learning”** section from the home page.
+- Moved those four process steps into one responsive **ocean / night-to-dawn WebGL sequence**.
+- Rebuilt the sun as a CSS `aspect-ratio: 1 / 1` circle behind the WebGL water, so it cannot become an oval and it rises from *under* the water instead of spawning on top of it.
+- The ocean camera now adapts to viewport width **and height** so common laptop, tablet, and phone dimensions keep the horizon and copy in frame.
+- Removed the NIGHT—DAWN meter/pill.
+- The smart-glasses viewer supports orbit, pan, scroll/pinch zoom, pointer-reactive lighting, and responsive auto-fit.
+- The 3D viewer opts out of Lenis wheel/touch interception so zoom gestures actually reach OrbitControls.
+- Phosphor Icons remain the icon system.
+- Direct dependency versions are pinned to avoid top-level version drift on Vercel.
+- Next.js is pinned to **14.2.35**, the patched release for the 14.x line.
 
-## Run locally
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the local URL shown by Next.js.
+Then open `http://localhost:3000`.
 
-## Build
+## Production check
 
 ```bash
 npm run build
-npm start
+npm run start
 ```
 
-## Important assets
+## Vercel
 
-- `public/models/glasses.glb` — the real smart-glasses model used by the WebGL viewer.
-- `public/models/Boat.glb` — preserved from the alternate 3D project assets for future use.
-- `public/glasses360/` — pre-rendered model frames kept as a visual/fallback asset set.
+This is a standard Next.js App Router project and can be imported directly into Vercel. Node.js 18.17+ is declared in `package.json`.
 
-## Main 3D components
+The contact form uses Resend. Set these Vercel environment variables if you want the form to send email:
 
-- `components/ImmersiveHorizon3D.tsx`
-- `components/GlassesWorld3D.tsx`
-- `components/PrototypeLab3D.tsx`
-- `components/SpatialProjectDeck.tsx`
-- `components/SmoothScroll.tsx`
+- `RESEND_API_KEY`
+- `CONTACT_TO_EMAIL`
+- `CONTACT_FROM_EMAIL`
 
-Preview videos are included in `PREVIEWS/`.
+The visual site builds independently of whether those variables are present; the API route returns a configuration error only when the form is submitted without them.
 
-## Latest responsive 3D polish
+## Main interactive files
 
-See `POLISH_CHANGES.md` for the viewport alignment, natural sunrise, orbit/zoom glasses viewer, typography, and Phosphor icon changes.
+- `components/ImmersiveHorizon3D.tsx` — responsive ocean/process scene
+- `components/GlassesWorld3D.tsx` — GLB viewer with orbit/pan/zoom
+- `components/PrototypeLab3D.tsx` — prototype viewer layout
+- `components/AnimeHorizonScene.tsx` — hero illustration
+- `app/globals.css` — responsive layout and motion styling
