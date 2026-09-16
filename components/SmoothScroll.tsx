@@ -29,7 +29,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
       const hash = anchor.getAttribute("href");
       if (!hash || hash === "#") return;
-      const target = document.querySelector(hash);
+      const target = document.querySelector<HTMLElement>(hash);
       if (!target) return;
 
       event.preventDefault();
