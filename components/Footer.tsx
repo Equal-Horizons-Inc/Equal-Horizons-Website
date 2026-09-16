@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "@phosphor-icons/react/ssr";
 
 const links = [
   { href: "/about", label: "About" },
@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="footer-invite">
           <p>Have experience or an idea worth sharing?</p>
           <Link href="/contact">
-            Say hello <ArrowUpRight size={17} aria-hidden="true" />
+            Say hello <ArrowUpRight size={17} weight="bold" aria-hidden="true" />
           </Link>
         </div>
       </div>

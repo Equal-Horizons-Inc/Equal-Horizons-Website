@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "@phosphor-icons/react";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -74,7 +74,7 @@ export default function Navbar() {
         </ul>
 
         <Link href="/contact" className="nav-contact">
-          Contact <ArrowUpRight size={16} aria-hidden="true" />
+          Contact <ArrowUpRight size={16} weight="bold" aria-hidden="true" />
         </Link>
 
         <button

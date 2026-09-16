@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, Eye, Lightbulb, Radio } from "lucide-react";
+import { ArrowUpRight, Eye, Lightbulb, Broadcast } from "@phosphor-icons/react";
 import { useRef } from "react";
 
 export type ProjectScrollRowProps = {
@@ -15,7 +15,7 @@ export type ProjectScrollRowProps = {
 
 const icons = {
   glasses: Eye,
-  signals: Radio,
+  signals: Broadcast,
   hardware: Lightbulb,
 };
 
@@ -53,7 +53,7 @@ export default function ProjectScrollRow(project: ProjectScrollRowProps) {
           className="project-link"
           aria-label={`Learn more about ${project.title}`}
         >
-          Explore direction <ArrowUpRight size={17} aria-hidden="true" />
+          Explore direction <ArrowUpRight size={17} weight="bold" aria-hidden="true" />
         </Link>
       </motion.div>
 

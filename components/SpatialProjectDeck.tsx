@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, Radio, Blocks, ScanEye } from "lucide-react";
+import { ArrowUpRight, Broadcast, Cube, Scan } from "@phosphor-icons/react";
 import Link from "next/link";
 import { PointerEvent, ReactNode } from "react";
 
@@ -24,9 +24,9 @@ function TiltCard({ children, className = "" }: { children: ReactNode; className
 }
 
 const cards = [
-  { n: "01", title: "Communication signals", copy: "Interfaces that bridge text, sound, gesture, and visual communication without forcing one rigid workflow.", Icon: Radio, style: "signal" },
-  { n: "02", title: "Affordable hardware", copy: "Modular parts and repairable assemblies aimed at lowering cost without lowering care.", Icon: Blocks, style: "hardware" },
-  { n: "03", title: "Open building blocks", copy: "Experiments that can become reusable pieces instead of disappearing inside a closed prototype.", Icon: ScanEye, style: "open" },
+  { n: "01", title: "Communication signals", copy: "Interfaces that bridge text, sound, gesture, and visual communication without forcing one rigid workflow.", Icon: Broadcast, style: "signal" },
+  { n: "02", title: "Affordable hardware", copy: "Modular parts and repairable assemblies aimed at lowering cost without lowering care.", Icon: Cube, style: "hardware" },
+  { n: "03", title: "Open building blocks", copy: "Experiments that can become reusable pieces instead of disappearing inside a closed prototype.", Icon: Scan, style: "open" },
 ] as const;
 
 export default function SpatialProjectDeck() {
@@ -49,7 +49,7 @@ export default function SpatialProjectDeck() {
                 <i className="spatial-ring spatial-ring--2" />
                 <i className="spatial-ring spatial-ring--3" />
               </div>
-              <div className="spatial-card-copy"><h3>{title}</h3><p>{copy}</p><Link href="/vision">Explore direction <ArrowUpRight size={17} /></Link></div>
+              <div className="spatial-card-copy"><h3>{title}</h3><p>{copy}</p><Link href="/vision">Explore direction <ArrowUpRight size={17} weight="bold" /></Link></div>
             </TiltCard>
           ))}
         </div>

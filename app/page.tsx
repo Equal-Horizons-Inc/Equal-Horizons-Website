@@ -3,7 +3,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
-import { ArrowDownRight, ArrowUpRight, MoveRight } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, ArrowRight } from "@phosphor-icons/react";
 import AnimeHorizonScene from "@/components/AnimeHorizonScene";
 import Reveal from "@/components/Reveal";
 import ScrollJourney from "@/components/ScrollJourney";
@@ -49,10 +49,10 @@ export default function HomePage() {
 
               <motion.div variants={staggerItem} className="hero-actions">
                 <Link href="#mission" className="action-button action-button--primary">
-                  Explore the mission <ArrowDownRight size={18} aria-hidden="true" />
+                  Explore the mission <ArrowDownRight size={18} weight="bold" aria-hidden="true" />
                 </Link>
                 <Link href="/get-involved" className="action-button action-button--ghost">
-                  Get involved <ArrowUpRight size={18} aria-hidden="true" />
+                  Get involved <ArrowUpRight size={18} weight="bold" aria-hidden="true" />
                 </Link>
               </motion.div>
 
@@ -103,7 +103,7 @@ export default function HomePage() {
               <p>Too many assistive tools are expensive, hard to find, difficult to customize, or designed without enough input from the people expected to use them.</p>
               <p>Equal Horizons is starting with listening, research, and small prototypes. The goal is not to promise finished answers—it is to learn responsibly and build better questions with the community.</p>
             </div>
-            <Link href="/about" className="text-link">Read our story <MoveRight size={18} aria-hidden="true" /></Link>
+            <Link href="/about" className="text-link">Read our story <ArrowRight size={18} weight="bold" aria-hidden="true" /></Link>
           </Reveal>
 
           <Reveal delay={0.12} className="horizon-window horizon-window--ultimate" aria-label="A stylized open arch looking toward a bright horizon">
@@ -138,7 +138,7 @@ export default function HomePage() {
           <Reveal delay={0.1} className="founder-list">
             <div className="founder-line"><span>MB</span><div><h3>Mithilessh Saai Bhasker</h3><p>Co-Founder · Research and product thinking</p></div><i>↗</i></div>
             <div className="founder-line"><span>SS</span><div><h3>Sahil Singla</h3><p>Co-Founder · Partnerships and responsible growth</p></div><i>↗</i></div>
-            <Link href="/about" className="text-link">Meet the founders <MoveRight size={18} aria-hidden="true" /></Link>
+            <Link href="/about" className="text-link">Meet the founders <ArrowRight size={18} weight="bold" aria-hidden="true" /></Link>
           </Reveal>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function HomePage() {
             <h2>Bring your experience, curiosity, or expertise.</h2>
             <p>Equal Horizons is looking for mentors, collaborators, volunteers, and people willing to share thoughtful accessibility feedback.</p>
             <div className="hero-actions">
-              <Link href="/get-involved" className="action-button action-button--primary">Find your way in <ArrowUpRight size={18} aria-hidden="true" /></Link>
+              <Link href="/get-involved" className="action-button action-button--primary">Find your way in <ArrowUpRight size={18} weight="bold" aria-hidden="true" /></Link>
               <Link href="/contact" className="action-button action-button--ghost">Start a conversation</Link>
             </div>
           </Reveal>

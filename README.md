@@ -45,3 +45,7 @@ npm start
 - `components/SmoothScroll.tsx`
 
 Preview videos are included in `PREVIEWS/`.
+
+## Latest responsive 3D polish
+
+See `POLISH_CHANGES.md` for the viewport alignment, natural sunrise, orbit/zoom glasses viewer, typography, and Phosphor icon changes.

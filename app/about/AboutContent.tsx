@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import {
   HandHeart,
   Lightbulb,
-  MessagesSquare,
+  Chats,
   ShieldCheck,
   Wallet,
-} from "lucide-react";
+} from "@phosphor-icons/react";
 import Reveal from "@/components/Reveal";
 import FounderCard from "@/components/FounderCard";
 import Button from "@/components/Button";
@@ -39,7 +39,7 @@ const VALUES = [
       "We're more interested in technology that quietly works every day than technology that's impressive once.",
   },
   {
-    icon: MessagesSquare,
+    icon: Chats,
     title: "Community feedback",
     description:
       "The disability community isn't a stakeholder we consult once — they're part of how every idea gets shaped and tested.",

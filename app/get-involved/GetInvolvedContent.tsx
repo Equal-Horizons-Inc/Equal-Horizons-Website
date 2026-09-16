@@ -2,55 +2,55 @@
 
 import { motion } from "framer-motion";
 import {
-  ClipboardList,
+  ClipboardText,
   Handshake,
   Heart,
-  MessageSquareHeart,
-  Sparkles,
+  ChatHeart,
+  Sparkle,
   Users,
-} from "lucide-react";
+} from "@phosphor-icons/react";
 import Reveal from "@/components/Reveal";
 import InvolvedCard from "@/components/InvolvedCard";
 import { staggerContainer, viewportOnce } from "@/lib/motion";
 
 const OPTIONS = [
   {
-    icon: <Heart size={22} strokeWidth={2} aria-hidden="true" />,
+    icon: <Heart size={22} weight="duotone" aria-hidden="true" />,
     title: "Volunteer",
     description:
       "Lend your time to research, outreach, or early-stage projects that need extra hands.",
     reason: "Volunteer",
   },
   {
-    icon: <Users size={22} strokeWidth={2} aria-hidden="true" />,
+    icon: <Users size={22} weight="duotone" aria-hidden="true" />,
     title: "Mentor",
     description:
       "Share domain expertise — accessibility, hardware, community partnerships — with a young team that's building carefully.",
     reason: "Mentor",
   },
   {
-    icon: <Handshake size={22} strokeWidth={2} aria-hidden="true" />,
+    icon: <Handshake size={22} weight="duotone" aria-hidden="true" />,
     title: "Partner",
     description:
       "Represent an organization, school, or advocacy group interested in collaborating with us.",
     reason: "Partner",
   },
   {
-    icon: <Sparkles size={22} strokeWidth={2} aria-hidden="true" />,
+    icon: <Sparkle size={22} weight="duotone" aria-hidden="true" />,
     title: "Sponsor",
     description:
       "Help fund the research and early prototyping that makes everything else possible.",
     reason: "Sponsor",
   },
   {
-    icon: <ClipboardList size={22} strokeWidth={2} aria-hidden="true" />,
+    icon: <ClipboardText size={22} weight="duotone" aria-hidden="true" />,
     title: "Future Testing",
     description:
       "Ask to be considered for early feedback sessions once we have something ready to test.",
     reason: "Future Testing",
   },
   {
-    icon: <MessageSquareHeart size={22} strokeWidth={2} aria-hidden="true" />,
+    icon: <ChatHeart size={22} weight="duotone" aria-hidden="true" />,
     title: "Share Feedback",
     description:
       "Tell us what's missing from assistive technology today. Lived experience shapes our direction more than anything else.",

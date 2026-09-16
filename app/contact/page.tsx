@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
-import { Mail, MapPin } from "lucide-react";
+import { EnvelopeSimple, MapPin } from "@phosphor-icons/react/ssr";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -35,7 +35,7 @@ export default function ContactPage() {
           <Reveal className="space-y-8 lg:col-span-2">
             <div className="flex gap-4">
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-horizon/10 text-horizon">
-                <Mail size={20} aria-hidden="true" />
+                <EnvelopeSimple size={20} weight="duotone" aria-hidden="true" />
               </div>
               <div>
                 <h2 className="font-sora text-base font-semibold text-ink">
@@ -50,7 +50,7 @@ export default function ContactPage() {
 
             <div className="flex gap-4">
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-horizon/10 text-horizon">
-                <MapPin size={20} aria-hidden="true" />
+                <MapPin size={20} weight="duotone" aria-hidden="true" />
               </div>
               <div>
                 <h2 className="font-sora text-base font-semibold text-ink">
