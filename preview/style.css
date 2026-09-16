@@ -123,17 +123,6 @@ a {
   pointer-events: none;
 }
 
-.hero-grid-lines {
-  position: absolute;
-  inset: 0;
-  opacity: 0.13;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(41, 76, 98, 0.22) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(41, 76, 98, 0.22) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, black, transparent 72%);
-}
 
 .hero-layout {
   position: relative;
