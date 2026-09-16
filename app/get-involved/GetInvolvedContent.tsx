@@ -5,7 +5,7 @@ import {
   ClipboardText,
   Handshake,
   Heart,
-  ChatHeart,
+  ChatCircle,
   Sparkle,
   Users,
 } from "@phosphor-icons/react";
@@ -50,7 +50,7 @@ const OPTIONS = [
     reason: "Future Testing",
   },
   {
-    icon: <ChatHeart size={22} weight="duotone" aria-hidden="true" />,
+    icon: <ChatCircle size={22} weight="duotone" aria-hidden="true" />,
     title: "Share Feedback",
     description:
       "Tell us what's missing from assistive technology today. Lived experience shapes our direction more than anything else.",
